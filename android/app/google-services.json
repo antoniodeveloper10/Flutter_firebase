@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "670801847233",
+    "project_id": "agoravai-46f22",
+    "storage_bucket": "agoravai-46f22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670801847233:android:0dfbcd73700a1a5d874540",
+        "android_client_info": {
+          "package_name": "com.example.agoravai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670801847233-avot6ens716bchksfo2c375brvifltou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxxKuYrzgO3CdRA5hEJS7ywOzY2gDb3jQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670801847233-avot6ens716bchksfo2c375brvifltou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
