@@ -1,4 +1,4 @@
-// ignore_for_file: dead_code
+// ignore_for_file: dead_code, prefer_const_constructors
 
 import 'dart:io';
 
@@ -83,43 +83,8 @@ class _LoginPageState extends State<LoginPage> {
                     letterSpacing: -1.5,
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.all(24),
-                  child: TextFormField(
-                    controller: email,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Email',
-                    ),
-                    keyboardType: TextInputType.emailAddress,
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Informe o email corretamente!';
-                      }
-                      return null;
-                    },
-                  ),
-                ),
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
-                  child: TextFormField(
-                    controller: senha,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Senha',
-                    ),
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Informa sua senha!';
-                      } else if (value.length < 6) {
-                        return 'Sua senha deve ter no mínimo 6 caracteres';
-                      }
-                      return null;
-                    },
-                  ),
-                ),
+                _email(),
+                _senha(),
                 Padding(
                   padding: EdgeInsets.all(24.0),
                   child: ElevatedButton(
@@ -168,6 +133,48 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _senha() {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
+      child: TextFormField(
+        controller: senha,
+        obscureText: true,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: 'Senha',
+        ),
+        validator: (value) {
+          if (value!.isEmpty) {
+            return 'Informa sua senha!';
+          } else if (value.length < 6) {
+            return 'Sua senha deve ter no mínimo 6 caracteres';
+          }
+          return null;
+        },
+      ),
+    );
+  }
+
+  Widget _email() {
+    return Padding(
+      padding: EdgeInsets.all(24),
+      child: TextFormField(
+        controller: email,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: 'Email',
+        ),
+        keyboardType: TextInputType.emailAddress,
+        validator: (value) {
+          if (value!.isEmpty) {
+            return 'Informe o email corretamente!';
+          }
+          return null;
+        },
       ),
     );
   }
